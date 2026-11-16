@@ -265,6 +265,7 @@ h1,h2,.category-title,.artwork-meta strong,.testimonial-inner blockquote{font-fa
 .product-details{padding:15px;display:flex;flex:1;flex-direction:column;justify-content:space-between;gap:16px}
 .product-details h3{font-size:21px}
 .product-description{font-size:9px;line-height:1.6;color:#806b59;margin:0 0 10px}
+.product-empty{grid-column:1/-1;padding:28px;border:1px solid var(--line);color:var(--quiet);font-size:12px;text-align:center}
 .add-to-order{border:1px solid #72533b;border-radius:2px;background:#72533b;color:#fffaf6;justify-content:center;gap:12px;padding:12px}
 .add-to-order:disabled{opacity:.55;cursor:not-allowed}
 .add-to-order:hover,.add-to-order.added{background:#523a2b;border-color:#523a2b}
@@ -291,3 +292,13 @@ h1,h2,.category-title,.artwork-meta strong,.testimonial-inner blockquote{font-fa
 .hero-kicker,.hero-art-caption,.hero-art-index,.hero-editorial .hero-bottomline,.product-type{letter-spacing:.2em}
 @media(max-width:680px){.hero-editorial-copy h1{font-size:clamp(62px,14.8vw,92px);line-height:.86}}
 
+
+
+/* Footer access to the browser-based admin panel */
+.footer-main{grid-template-columns:2fr 1fr 1fr auto auto;gap:5%}
+.footer-admin-wrap{display:flex;align-items:flex-start}
+.footer-admin{display:inline-flex;align-items:center;gap:10px;padding:10px 15px;border:1px solid #80624d;border-radius:999px;color:#e7d7c8;font-size:9px;letter-spacing:.04em;white-space:nowrap;transition:background .2s,color .2s,border-color .2s}
+.footer-admin:hover{background:#e7d7c8;color:#35271f;border-color:#e7d7c8}
+.footer-admin span{font-size:12px}
+@media(max-width:1000px){.footer-main{gap:4%}}
+@media(max-width:760px){.footer-main{grid-template-columns:1fr 1fr;gap:35px 22px}.footer-brand{grid-column:1/-1}.footer-admin-wrap{align-items:flex-start}}

@@ -1,20 +1,14 @@
-# The Art Factory — website and product admin
+# The Art Factory — static website and browser admin
 
-## Run the website and admin panel
+## Open the admin panel
 
-Requires Node.js 18 or newer. In the project folder, run:
+Open `admin.html` from the same website address as `index.html`. The panel can add and edit products, upload product images, set INR prices and stock, hide items, and delete items. The storefront reads the saved catalogue from this browser.
 
-```powershell
-npm start
-```
+Product changes are stored in browser local storage. They are available to the same browser on the same site address, but do not sync to other browsers, devices, or visitors. Clearing browser data removes these changes. Uploaded images are resized and stored in the browser; available storage depends on the browser.
 
-Open the website at `http://localhost:8787` and the admin panel at `http://localhost:8787/admin`. On first startup, the server prints a temporary admin password in its console. Set an `ADMIN_PASSWORD` environment variable before starting the server to use a password you choose and keep across restarts.
+For a shared live catalogue that all visitors see, the site will need a backend or hosted database later. This version has no backend and can be hosted as a static site.
 
-The admin panel supports adding products, uploading JPG/PNG/WebP images, setting prices in INR, setting stock, hiding products, and deleting products. Blank price means “Custom quote”; blank stock means “Made to order”. Product data is saved in `data/products.json`; uploaded images are saved in `uploads/`. The storefront reads active products from the server, so changes appear for visitors using this server.
+## Orders and contact
 
-## Order and hosting notes
-
-Orders are prepared in WhatsApp. This site does not process online payments. The admin panel uses this Node server and its local file storage; it will not work on static-only hosting. A public deployment needs a persistent Node host and persistent storage for `data/` and `uploads/`. Use a stable secret `ADMIN_PASSWORD` on that host and serve it over HTTPS.
-
-WhatsApp links currently open the recipient picker because no business number was supplied. Replace the generic Instagram links and blank-recipient email links in `index.html` with the studio's actual contact details. Replace the sample testimonial with an approved customer review. The supplied work includes five portrait examples; the gallery can be extended with additional original artwork files.
+Orders are prepared in WhatsApp; the website does not process online payments. WhatsApp links currently open the recipient picker because no business number was supplied. Replace the generic Instagram links and blank-recipient email links in `index.html` with the studio's actual contact details. Replace the sample testimonial with an approved customer review. The supplied portfolio has five portrait examples; additional original artworks can be added to the gallery.
 

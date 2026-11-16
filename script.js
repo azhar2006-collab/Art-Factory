@@ -200,12 +200,20 @@ function buildProductCard(product) {
 
 async function loadManagedProducts() {
   try {
-    const response = await fetch('/api/products', { cache: 'no-store' });
-    if (!response.ok) return;
-    const items = await response.json();
-    if (Array.isArray(items) && items.length) productGrid.replaceChildren(...items.map(buildProductCard));
+    const saved = localStorage.getItem('taf.products.v1');
+    if (!saved) return;
+    const items = JSON.parse(saved);
+    if (!Array.isArray(items)) return;
+    const activeItems = items.filter((product) => product.active !== false);
+    productGrid.replaceChildren(...activeItems.map(buildProductCard));
+    if (!activeItems.length) {
+      const empty = document.createElement('p');
+      empty.className = 'product-empty';
+      empty.textContent = 'Portrait orders are being updated. Please check back soon.';
+      productGrid.append(empty);
+    }
   } catch {
-    // Keep the bundled starter catalogue when the site is opened without the Node server.
+    // Keep the bundled starter catalogue if browser storage is unavailable.
   }
 }
 
@@ -322,4 +330,7 @@ orderForm.addEventListener('submit', (event) => {
 
 renderOrderBag();
 loadManagedProducts();
+window.addEventListener('storage', (event) => {
+  if (event.key === 'taf.products.v1') loadManagedProducts();
+});
 

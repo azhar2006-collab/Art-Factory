@@ -13,12 +13,11 @@
   <script src="admin.js" defer></script>
 </head>
 <body>
-  <header class="admin-header"><a class="admin-brand" href="/"><img src="assets/the-art-factory-logo.jpg" alt=""><span>The Art Factory<small>PRODUCT ADMIN</small></span></a><div class="header-actions"><a href="/" class="view-site">View website ↗</a><button id="logout-button" class="logout-button" type="button" hidden>Sign out</button></div></header>
+  <header class="admin-header"><a class="admin-brand" href="index.html"><img src="assets/the-art-factory-logo.jpg" alt=""><span>The Art Factory<small>PRODUCT ADMIN</small></span></a><div class="header-actions"><a href="index.html" class="view-site">View website ↗</a></div></header>
   <main class="admin-main">
-    <section class="login-panel" id="login-panel"><p class="eyebrow">STUDIO MANAGEMENT</p><h1>Welcome back.</h1><p>Sign in to manage your portrait products, pricing and stock.</p><form id="login-form"><label>Admin password<input type="password" name="password" required autocomplete="current-password" autofocus></label><button class="primary-button" type="submit">Sign in <span>→</span></button></form><p class="status" id="login-status" role="status"></p></section>
-    <section class="dashboard" id="dashboard" hidden>
+    <section class="dashboard" id="dashboard">
       <div class="dashboard-heading"><div><p class="eyebrow">YOUR STORE</p><h1>Products</h1><p>Update the catalogue shown on your website.</p></div><button class="primary-button" id="new-product-button" type="button">Add product <span>＋</span></button></div>
-      <div class="dashboard-notice"><b>Made-to-order:</b> leave stock blank. Set a number to track limited stock. Prices are in INR; leave price blank to show “Custom quote”.</div>
+      <div class="dashboard-notice"><b>Browser-only admin:</b> your changes save in this browser and update the storefront on this device. Blank stock means made to order; blank price means custom quote. This panel does not sync changes to other visitors or devices.</div>
       <p class="status dashboard-status" id="dashboard-status" role="status"></p>
       <div class="product-list" id="product-list"></div>
     </section>

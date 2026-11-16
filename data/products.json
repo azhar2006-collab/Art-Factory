@@ -1,0 +1,10 @@
+[
+  {"id":"pencil-ink","name":"Pencil & ink portrait","category":"LINE & SHADE","description":"Expressive linework and delicate detail, drawn from your photograph.","image":"assets/ink-portrait.jpeg","price":null,"stock":null,"active":true},
+  {"id":"charcoal-study","name":"Charcoal study","category":"DEPTH & CONTRAST","description":"A portrait study shaped with soft shadows and tonal depth.","image":"assets/colored-portrait.jpeg","price":null,"stock":null,"active":true},
+  {"id":"colour-portrait","name":"Colour portrait","category":"FULL OF LIFE","description":"A colour portrait made to capture personality and warmth.","image":"assets/couple-green-portrait.jpeg","price":null,"stock":null,"active":true},
+  {"id":"couple-portrait","name":"Couple portrait","category":"SIDE BY SIDE","description":"Two people brought together in a personal portrait.","image":"assets/couple-ceremony-portrait.jpeg","price":null,"stock":null,"active":true},
+  {"id":"family-portrait","name":"Family portrait","category":"YOUR PEOPLE","description":"A keepsake portrait of the people who make a place feel like home.","image":"assets/couple-wedding-portrait.jpeg","price":null,"stock":null,"active":true},
+  {"id":"pet-portrait","name":"Pet portrait","category":"EVERY PERSONALITY","description":"A hand-drawn keepsake of your favourite companion.","image":"","price":null,"stock":null,"active":true},
+  {"id":"custom-portrait","name":"Custom portrait","category":"MADE FOR YOU","description":"A one-of-a-kind portrait created around your photograph and idea.","image":"assets/couple-wedding-portrait.jpeg","price":null,"stock":null,"active":true}
+]
+

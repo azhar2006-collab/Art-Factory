@@ -264,7 +264,9 @@ h1,h2,.category-title,.artwork-meta strong,.testimonial-inner blockquote{font-fa
 .product-card:hover .product-image img{transform:none}
 .product-details{padding:15px;display:flex;flex:1;flex-direction:column;justify-content:space-between;gap:16px}
 .product-details h3{font-size:21px}
+.product-description{font-size:9px;line-height:1.6;color:#806b59;margin:0 0 10px}
 .add-to-order{border:1px solid #72533b;border-radius:2px;background:#72533b;color:#fffaf6;justify-content:center;gap:12px;padding:12px}
+.add-to-order:disabled{opacity:.55;cursor:not-allowed}
 .add-to-order:hover,.add-to-order.added{background:#523a2b;border-color:#523a2b}
 .product-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#785b41;background:#f0e2d4}
 .product-placeholder span{font:400 64px/1 'Bodoni Moda',Georgia,serif}
@@ -288,3 +290,4 @@ h1,h2,.category-title,.artwork-meta strong,.testimonial-inner blockquote{font-fa
 .hero-editorial-copy .hero-intro{letter-spacing:.005em}
 .hero-kicker,.hero-art-caption,.hero-art-index,.hero-editorial .hero-bottomline,.product-type{letter-spacing:.2em}
 @media(max-width:680px){.hero-editorial-copy h1{font-size:clamp(62px,14.8vw,92px);line-height:.86}}
+

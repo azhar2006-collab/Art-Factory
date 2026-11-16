@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en" class="is-loading">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Handcrafted portrait art by The Art Factory. Turn your favourite memories into timeless portraits, made with care and attention to detail.">
+  <title>The Art Factory — Portraits made personal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:wght@400;500;600;700&family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page-loader" id="page-loader" role="status" aria-live="polite" aria-label="Loading The Art Factory">
+    <div class="loader-art" aria-hidden="true"><span class="loader-orbit"></span><img src="assets/the-art-factory-logo.jpg" alt=""><span class="loader-spark">✳</span></div>
+    <p class="loader-title">The Art Factory</p>
+    <p class="loader-subtitle">HANDCRAFTED PORTRAITS · MADE PERSONAL</p>
+    <span class="loader-progress" aria-hidden="true"><i></i></span>
+  </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="nav-wrap">
+      <a class="brand" href="#top" aria-label="The Art Factory home">
+        <img src="assets/the-art-factory-logo.jpg" alt="The Art Factory logo" width="68" height="68">
+        <span class="brand-name">The Art Factory<small>PORTRAITS, MADE PERSONAL</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="#top">Home</a><a href="#about">About us</a><a href="#shop">Shop portraits</a><a href="#artwork">Our artwork</a><a href="#shop">Portrait styles</a><a href="#contact">Contact</a>
+        <a class="nav-cta" href="#contact">Start a portrait <span aria-hidden="true">↗</span></a>
+      </nav>
+      <button class="order-bag" type="button" aria-label="Open order bag"><span>Order bag</span><b id="bag-count">0</b></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero hero-editorial" aria-labelledby="hero-title">
+      <svg class="hero-botanical" viewBox="0 0 180 300" fill="none" aria-hidden="true">
+        <path d="M24 286C50 245 73 196 88 145C103 94 111 50 104 13" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M68 205C43 195 31 178 31 157C52 163 66 178 68 205Z" fill="currentColor"/>
+        <path d="M79 177C100 161 108 140 101 119C83 132 75 152 79 177Z" fill="currentColor"/>
+        <path d="M91 133C69 119 61 100 68 81C86 94 94 112 91 133Z" fill="currentColor"/>
+        <path d="M101 91C121 77 128 57 120 38C103 52 96 71 101 91Z" fill="currentColor"/>
+        <path d="M51 237C34 221 15 218 0 229C15 244 34 248 51 237Z" fill="currentColor"/>
+        <circle cx="133" cy="236" r="2" fill="currentColor"/><circle cx="148" cy="214" r="2" fill="currentColor"/><circle cx="153" cy="247" r="1.5" fill="currentColor"/>
+      </svg>
+      <span class="hero-sunburst" aria-hidden="true"></span>
+      <div class="hero-inner section-shell">
+        <div class="hero-copy hero-editorial-copy">
+          <p class="hero-kicker"><span></span> THE ART FACTORY <i>·</i> PORTRAITS MADE PERSONAL</p>
+          <h1 id="hero-title">A moment<br>you love.<br><em>Made to last.</em></h1>
+          <p class="hero-intro">We turn your favourite photographs into hand-drawn portraits—so the people and moments closest to you have a place in your home, always.</p>
+          <div class="hero-actions"><a class="button button-dark" href="#custom">Commission a portrait <span aria-hidden="true">↗</span></a><a class="hero-work-link" href="#artwork">Explore the artwork <span aria-hidden="true">↓</span></a></div>
+          <div class="hero-signoff"><span class="hero-signoff-mark">✳</span><span>Thoughtfully drawn, from your photo<br><strong>and the story behind it.</strong></span></div>
+        </div>
+        <div class="hero-art hero-editorial-art">
+          <div class="hero-art-backdrop" aria-hidden="true"></div>
+          <span class="hero-art-caption">A KEEPSAKE, MADE BY HAND <i>✳</i></span>
+          <figure class="hero-featured-art"><img src="assets/couple-wedding-portrait.jpeg" alt="Hand-painted portrait of a couple in traditional wedding attire" fetchpriority="high"><figcaption><span>01 — COLOUR PORTRAIT</span><span>Made from a memory</span></figcaption></figure>
+          <figure class="hero-mini-art"><img src="assets/ink-portrait.jpeg" alt="Ink portrait detail from The Art Factory" loading="eager"><figcaption>Every line, considered.</figcaption></figure>
+          <div class="hero-roundel" aria-label="Handmade with care"><span>HAND<br>DRAWN</span><b>✳</b><span>WITH<br>CARE</span></div>
+          <span class="hero-art-index">THE ART FACTORY <i>—</i> 2026</span>
+        </div>
+      </div>
+      <div class="hero-bottomline section-shell"><span>YOUR PHOTO, REIMAGINED AS ART</span><span>MADE FOR THE MOMENTS THAT MATTER <b>↓</b></span></div>
+    </section>
+
+    <section class="proof-strip" aria-label="Our approach">
+      <div><span class="proof-icon">✳</span><span>Made with intention</span></div><span class="proof-divider"></span>
+      <div><span class="proof-icon">◌</span><span>One portrait at a time</span></div><span class="proof-divider"></span>
+      <div><span class="proof-icon">✦</span><span>Created to be treasured</span></div>
+    </section>
+
+    <section class="shop-section section-shell" id="shop" aria-labelledby="shop-title">
+      <div class="section-heading shop-heading"><div><p class="eyebrow">MADE TO ORDER, MADE FOR YOU</p><h2 id="shop-title">Portraits to order.</h2></div><div class="shop-intro"><p>Choose a portrait style below to begin. Each piece is made from your photograph, with size and details confirmed with you before we start.</p><span>HANDCRAFTED · PERSONAL · ONE OF A KIND</span></div></div>
+      <div class="product-grid">
+        <article class="product-card"><a class="product-image" href="#artwork" aria-label="Pencil and ink portrait example"><img src="assets/ink-portrait.jpeg" alt="Detailed ink portrait on paper" loading="lazy"></a><div class="product-details"><div><p class="product-type">LINE & SHADE</p><h3>Pencil & ink portrait</h3><p class="product-price">Made to order · Custom quote</p></div><button class="add-to-order" type="button" data-product="Pencil and ink portrait">Order this portrait <span>→</span></button></div></article>
+        <article class="product-card"><a class="product-image" href="#artwork" aria-label="Charcoal portrait style example"><img src="assets/colored-portrait.jpeg" alt="Portrait artwork example" loading="lazy"></a><div class="product-details"><div><p class="product-type">DEPTH & CONTRAST</p><h3>Charcoal study</h3><p class="product-price">Made to order · Custom quote</p></div><button class="add-to-order" type="button" data-product="Charcoal study">Order this portrait <span>→</span></button></div></article>
+        <article class="product-card"><a class="product-image" href="#artwork" aria-label="Colour portrait example"><img src="assets/couple-green-portrait.jpeg" alt="Colour portrait of a couple" loading="lazy"></a><div class="product-details"><div><p class="product-type">FULL OF LIFE</p><h3>Colour portrait</h3><p class="product-price">Made to order · Custom quote</p></div><button class="add-to-order" type="button" data-product="Colour portrait">Order this portrait <span>→</span></button></div></article>
+        <article class="product-card"><a class="product-image" href="#artwork" aria-label="Couple portrait example"><img src="assets/couple-ceremony-portrait.jpeg" alt="Wedding couple portrait artwork" loading="lazy"></a><div class="product-details"><div><p class="product-type">SIDE BY SIDE</p><h3>Couple portrait</h3><p class="product-price">Made to order · Custom quote</p></div><button class="add-to-order" type="button" data-product="Couple portrait">Order this portrait <span>→</span></button></div></article>
+        <article class="product-card"><a class="product-image" href="#artwork" aria-label="Family portrait example"><img src="assets/couple-wedding-portrait.jpeg" alt="Family portrait artwork example" loading="lazy"></a><div class="product-details"><div><p class="product-type">YOUR PEOPLE</p><h3>Family portrait</h3><p class="product-price">Made to order · Custom quote</p></div><button class="add-to-order" type="button" data-product="Family portrait">Order this portrait <span>→</span></button></div></article>
+        <article class="product-card"><div class="product-image product-placeholder" aria-hidden="true"><span>♡</span><small>YOUR COMPANION, DRAWN BY HAND</small></div><div class="product-details"><div><p class="product-type">EVERY PERSONALITY</p><h3>Pet portrait</h3><p class="product-price">Made to order · Custom quote</p></div><button class="add-to-order" type="button" data-product="Pet portrait">Order this portrait <span>→</span></button></div></article>
+        <article class="product-card"><a class="product-image" href="#artwork" aria-label="Custom portrait example"><img src="assets/couple-wedding-portrait.jpeg" alt="Custom portrait artwork example" loading="lazy"></a><div class="product-details"><div><p class="product-type">MADE FOR YOU</p><h3>Custom portrait</h3><p class="product-price">Made to order · Custom quote</p></div><button class="add-to-order" type="button" data-product="Custom portrait">Order this portrait <span>→</span></button></div></article>
+      </div>      <p class="shop-footnote">Portraits are made to order. Final pricing depends on style, size and number of people; we’ll confirm your quote before your commission begins.</p>
+    </section>
+
+    <section class="about section-shell" id="about">
+      <div class="about-image-wrap"><img src="assets/ink-portrait.jpeg" alt="Detailed ink portrait artwork on paper" loading="lazy"><span class="image-caption">A portrait, made with care</span></div>
+      <div class="about-copy"><p class="eyebrow">A STUDIO FOR YOUR STORIES</p><h2>More than a likeness.<br><em>A feeling, remembered.</em></h2><p class="body-copy">At The Art Factory, we believe the moments we hold closest deserve more than a place in our camera roll. We turn them into thoughtful, handcrafted portraits made to live on your walls and in your family stories.</p><p class="body-copy">Every line, shade and small detail is considered with care, so the finished artwork feels unmistakably yours.</p><a class="underlined-link" href="#custom">Get to know our process <span aria-hidden="true">→</span></a></div>
+    </section>
+
+    <section class="gallery-section" id="artwork">
+      <div class="section-shell">
+        <div class="section-heading gallery-heading"><div><p class="eyebrow">A FEW STORIES WE'VE TOLD</p><h2>Made by hand.<br><em>Meant to be kept.</em></h2></div><p class="heading-side">A selection of portraits from the studio. Every piece is made to honour the people and moments behind it.</p></div>
+        <div class="gallery-toolbar"><span class="gallery-count"><b>05</b> PORTRAITS</span><div class="filter-list" role="group" aria-label="Filter artwork">
+          <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All artwork</button><button class="filter-button" type="button" data-filter="pencil" aria-pressed="false">Pencil & ink</button><button class="filter-button" type="button" data-filter="color" aria-pressed="false">Colour</button><button class="filter-button" type="button" data-filter="couple" aria-pressed="false">Couples</button>
+        </div></div>
+        <div class="art-grid" id="art-grid">
+          <button class="artwork-card art-tall" type="button" data-category="couple color" data-title="A day to remember" data-image="assets/couple-ceremony-portrait.jpeg" aria-label="View A day to remember, a colour couple portrait"><span class="artwork-photo"><img src="assets/couple-ceremony-portrait.jpeg" alt="Colour couple portrait in traditional wedding clothes" loading="lazy"></span><span class="artwork-meta"><span><small>COLOUR PORTRAIT · COUPLE</small><strong>A day to remember</strong></span><span class="card-open">↗</span></span></button>
+          <button class="artwork-card art-short" type="button" data-category="pencil color" data-title="A study in warmth" data-image="assets/colored-portrait.jpeg" aria-label="View A study in warmth, a colour portrait"><span class="artwork-photo"><img src="assets/colored-portrait.jpeg" alt="Hand-drawn warm-toned portrait of a smiling man" loading="lazy"></span><span class="artwork-meta"><span><small>COLOUR PENCIL · PORTRAIT</small><strong>A study in warmth</strong></span><span class="card-open">↗</span></span></button>
+          <button class="artwork-card art-medium" type="button" data-category="couple color" data-title="In your own world" data-image="assets/couple-green-portrait.jpeg" aria-label="View In your own world, a colour couple portrait"><span class="artwork-photo"><img src="assets/couple-green-portrait.jpeg" alt="Colour portrait of a couple leaning together" loading="lazy"></span><span class="artwork-meta"><span><small>COLOUR PORTRAIT · COUPLE</small><strong>In your own world</strong></span><span class="card-open">↗</span></span></button>
+          <button class="artwork-card art-medium" type="button" data-category="pencil" data-title="Lines of character" data-image="assets/ink-portrait.jpeg" aria-label="View Lines of character, an ink portrait"><span class="artwork-photo"><img src="assets/ink-portrait.jpeg" alt="Detailed ink portrait of a woman in traditional clothing" loading="lazy"></span><span class="artwork-meta"><span><small>INK STUDY · PORTRAIT</small><strong>Lines of character</strong></span><span class="card-open">↗</span></span></button>
+          <button class="artwork-card art-tall" type="button" data-category="couple color" data-title="The beginning of always" data-image="assets/couple-wedding-portrait.jpeg" aria-label="View The beginning of always, a wedding portrait"><span class="artwork-photo"><img src="assets/couple-wedding-portrait.jpeg" alt="Hand-painted wedding portrait of a couple" loading="lazy"></span><span class="artwork-meta"><span><small>WATERCOLOR · COUPLE</small><strong>The beginning of always</strong></span><span class="card-open">↗</span></span></button>
+        </div>
+        <div class="gallery-bottom"><span>Each keepsake begins with a photograph and a conversation.</span><a class="underlined-link" href="#custom">Create something personal <span aria-hidden="true">→</span></a></div>
+      </div>
+    </section>
+
+    <section class="featured section-shell">
+      <div class="featured-copy"><p class="eyebrow">FEATURED FROM THE STUDIO</p><h2>Love, captured<br><em>in every detail.</em></h2><p class="body-copy">From the fall of a veil to the smallest familiar smile, we take the time to capture what makes a moment yours.</p><a class="button button-outline" href="#artwork">Explore all artwork <span aria-hidden="true">↗</span></a><div class="featured-mark">✳ <span>TAF<br>STUDIO</span></div></div>
+      <div class="featured-photos"><figure class="featured-main"><img src="assets/couple-wedding-portrait.jpeg" alt="Wedding portrait commission" loading="lazy"><figcaption>Moments made timeless <span>01 / 02</span></figcaption></figure><figure class="featured-inset"><img src="assets/colored-portrait.jpeg" alt="Warm colour portrait commission" loading="lazy"><figcaption>Full of character</figcaption></figure></div>
+    </section>
+
+    <section class="custom-section" id="custom">
+      <div class="custom-inner section-shell"><div class="custom-intro"><p class="eyebrow">YOUR STORY, IN YOUR STYLE</p><h2>Your memories deserve<br>to be a <em>masterpiece.</em></h2><p>Have a favourite photograph transformed into a beautiful handcrafted portrait. Let's create something special together.</p><a class="button button-light" href="https://wa.me/?text=Hello%20The%20Art%20Factory%2C%20I%E2%80%99d%20love%20to%20enquire%20about%20a%20custom%20portrait." target="_blank" rel="noopener noreferrer">Enquire on WhatsApp <span aria-hidden="true">↗</span></a></div>
+        <div class="process"><div class="process-step"><span>01</span><div><h3>Share your favourite photograph</h3><p>Tell us about the moment you want to keep.</p></div></div><div class="process-step"><span>02</span><div><h3>Choose your portrait style</h3><p>We'll find the medium and feel that suit your story.</p></div></div><div class="process-step"><span>03</span><div><h3>Receive your custom artwork</h3><p>Your finished keepsake, made with care.</p></div></div></div>
+      </div>
+    </section>
+
+    <section class="values section-shell"><div class="section-heading"><div><p class="eyebrow">WHY THE ART FACTORY</p><h2>Small details.<br><em>Meaningful difference.</em></h2></div><p class="heading-side">Thoughtful work, a personal process and a little extra care in every mark.</p></div><div class="value-grid"><article><span class="value-symbol">⌕</span><h3>Attention to every detail</h3><p>We look closely at the expressions and little features that make a portrait feel true.</p></article><article><span class="value-symbol">✳</span><h3>Personal by design</h3><p>Your photograph, preferences and story guide the way each piece comes together.</p></article><article><span class="value-symbol">✎</span><h3>Creative excellence</h3><p>Careful technique and a considered eye bring depth and character to every artwork.</p></article><article><span class="value-symbol">◉</span><h3>Made with passion</h3><p>Each portrait receives the patience and attention a lasting keepsake deserves.</p></article></div></section>
+
+    <section class="testimonial-section"><div class="testimonial-inner section-shell"><p class="eyebrow">KIND WORDS, PLACEHOLDER REVIEWS</p><span class="quote-mark">“</span><blockquote>It’s one thing to see a photograph. It’s another to see the feeling in it, captured by hand.</blockquote><p class="testimonial-note">Sample testimonial — replace with a customer review</p><div class="testimonial-dots" aria-hidden="true"><i class="selected"></i><i></i><i></i></div></div></section>
+
+    <section class="contact-section section-shell" id="contact"><div class="contact-info"><p class="eyebrow">LET'S MAKE IT PERSONAL</p><h2>Have a moment<br>in <em>mind?</em></h2><p class="body-copy">Tell us a little about the portrait you'd love to create. We'll take it from there, together.</p><a class="contact-channel" href="https://wa.me/?text=Hello%20The%20Art%20Factory%2C%20I%E2%80%99d%20like%20to%20talk%20about%20a%20portrait." target="_blank" rel="noopener noreferrer"><span class="channel-icon">↗</span><span><small>WHATSAPP</small><strong>Start an enquiry</strong></span><span class="channel-arrow">→</span></a><a class="contact-channel" href="mailto:?subject=Portrait%20enquiry%20-%20The%20Art%20Factory"><span class="channel-icon">✉</span><span><small>EMAIL</small><strong>Write to the studio</strong></span><span class="channel-arrow">→</span></a><a class="contact-channel" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><span class="channel-icon">◎</span><span><small>INSTAGRAM</small><strong>Visit Instagram</strong></span><span class="channel-arrow">↗</span></a><p class="contact-note">Studio contact links can be updated once your WhatsApp number, email and Instagram profile are ready.</p></div>
+      <form class="contact-form" id="contact-form" novalidate><div class="form-heading"><span>01 — 04</span><h3>Start with a few details.</h3></div><div class="form-row"><label>Your name<input name="name" autocomplete="name" required minlength="2" placeholder="Name"></label><label>Email address<input name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label></div><label>Phone number <span class="optional">(optional)</span><input name="phone" type="tel" autocomplete="tel" placeholder="Include your country code"></label><label>Tell us about your portrait<textarea name="message" rows="4" required minlength="10" placeholder="Who or what would you like us to draw?"></textarea></label><button class="button button-dark form-submit" type="submit">Continue to WhatsApp <span aria-hidden="true">↗</span></button><p class="form-feedback" id="form-feedback" role="status" aria-live="polite">Your details are only used to prepare an enquiry. Sending continues in WhatsApp.</p></form>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-main section-shell"><div class="footer-brand"><a class="brand brand-footer" href="#top"><img src="assets/the-art-factory-logo.jpg" alt="" width="64" height="64"><span class="brand-name">The Art Factory<small>PORTRAITS, MADE PERSONAL</small></span></a><p>Handcrafted portraits that hold on to the moments you never want to lose.</p></div><div class="footer-links"><h3>EXPLORE</h3><a href="#about">Our story</a><a href="#artwork">Our artwork</a><a href="#shop">Portrait styles</a><a href="#custom">Custom portraits</a></div><div class="footer-links"><h3>GET IN TOUCH</h3><a href="#contact">Contact the studio</a><a href="https://wa.me/?text=Hello%20The%20Art%20Factory" target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="mailto:?subject=Hello%20The%20Art%20Factory">Email</a></div><a class="back-top" href="#top" aria-label="Back to top">↑</a></div><div class="footer-bottom section-shell"><span>© <span id="year">2026</span> The Art Factory. All rights reserved.</span><span>Made for the moments that matter.</span></div></footer>
+
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-title"><button class="order-close" type="button" aria-label="Close order bag">×</button><p class="eyebrow">YOUR PORTRAIT COMMISSION</p><h2 id="order-title">Your order bag</h2><p class="order-intro">Choose the portrait styles you have in mind. We’ll confirm size, details and a quote with you before work begins.</p><div class="order-items" id="order-items"><p class="order-empty">Your bag is waiting for a portrait.</p></div><form class="order-form" id="order-form"><label>Your name<input name="name" autocomplete="name" required minlength="2" placeholder="Name"></label><div class="order-form-row"><label>Email <span>(optional)</span><input name="email" type="email" autocomplete="email" placeholder="you@example.com"></label><label>Phone / WhatsApp<input name="phone" type="tel" autocomplete="tel" required placeholder="Include country code"></label></div><label>Notes for the artist <span>(optional)</span><textarea name="notes" rows="3" placeholder="Size, occasion, number of people, or anything to know"></textarea></label><button class="button button-dark order-submit" type="submit" disabled>Continue order on WhatsApp <span>↗</span></button><p class="order-status" id="order-status" role="status">No payment is taken on this site. Your order request opens in WhatsApp.</p></form></dialog>
+  <dialog class="lightbox" id="lightbox" aria-label="Artwork preview"><button class="lightbox-close" type="button" aria-label="Close preview">×</button><button class="lightbox-prev" type="button" aria-label="Previous artwork">←</button><figure><img src="" alt=""><figcaption></figcaption></figure><button class="lightbox-next" type="button" aria-label="Next artwork">→</button><span class="lightbox-counter"></span></dialog>
+</body>
+</html>
+
+
+

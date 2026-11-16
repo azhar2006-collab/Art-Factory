@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#f5e8dc">
+  <title>Product Admin — The Art Factory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+  <script src="admin.js" defer></script>
+</head>
+<body>
+  <header class="admin-header"><a class="admin-brand" href="/"><img src="assets/the-art-factory-logo.jpg" alt=""><span>The Art Factory<small>PRODUCT ADMIN</small></span></a><div class="header-actions"><a href="/" class="view-site">View website ↗</a><button id="logout-button" class="logout-button" type="button" hidden>Sign out</button></div></header>
+  <main class="admin-main">
+    <section class="login-panel" id="login-panel"><p class="eyebrow">STUDIO MANAGEMENT</p><h1>Welcome back.</h1><p>Sign in to manage your portrait products, pricing and stock.</p><form id="login-form"><label>Admin password<input type="password" name="password" required autocomplete="current-password" autofocus></label><button class="primary-button" type="submit">Sign in <span>→</span></button></form><p class="status" id="login-status" role="status"></p></section>
+    <section class="dashboard" id="dashboard" hidden>
+      <div class="dashboard-heading"><div><p class="eyebrow">YOUR STORE</p><h1>Products</h1><p>Update the catalogue shown on your website.</p></div><button class="primary-button" id="new-product-button" type="button">Add product <span>＋</span></button></div>
+      <div class="dashboard-notice"><b>Made-to-order:</b> leave stock blank. Set a number to track limited stock. Prices are in INR; leave price blank to show “Custom quote”.</div>
+      <p class="status dashboard-status" id="dashboard-status" role="status"></p>
+      <div class="product-list" id="product-list"></div>
+    </section>
+  </main>
+  <dialog class="product-dialog" id="product-dialog" aria-labelledby="form-title"><form id="product-form"><div class="dialog-heading"><div><p class="eyebrow">CATALOGUE DETAILS</p><h2 id="form-title">Add a product</h2></div><button class="dialog-close" id="dialog-close" type="button" aria-label="Close">×</button></div><input type="hidden" name="id"><label>Product name<input name="name" required maxlength="100" placeholder="e.g. Couple portrait"></label><label>Category / style<input name="category" maxlength="60" placeholder="e.g. COLOUR · COUPLE"></label><label>Description<textarea name="description" rows="3" maxlength="500" placeholder="Describe the portrait style"></textarea></label><div class="field-row"><label>Price (INR)<input name="price" type="number" min="0" step="1" placeholder="Blank = custom quote"></label><label>Stock<input name="stock" type="number" min="0" step="1" placeholder="Blank = made to order"></label></div><label>Product image<input name="imageFile" type="file" accept="image/jpeg,image/png,image/webp"><span class="field-hint">JPG, PNG or WebP · up to 8 MB</span></label><label>Or use an image path<input name="image" placeholder="assets/your-image.jpg"></label><label class="active-toggle"><input type="checkbox" name="active" checked> Show this product on the website</label><div class="image-preview" id="image-preview" hidden><img alt="Product preview"></div><p class="status" id="form-status" role="status"></p><div class="dialog-actions"><button class="secondary-button" id="cancel-button" type="button">Cancel</button><button class="primary-button" type="submit">Save product <span>→</span></button></div></form></dialog>
+</body>
+</html>
+

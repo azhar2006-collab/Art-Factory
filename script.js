@@ -146,6 +146,68 @@ const orderForm = document.querySelector('#order-form');
 const orderSubmit = orderForm.querySelector('.order-submit');
 const orderStatus = document.querySelector('#order-status');
 const orderBag = new Map();
+const productGrid = document.querySelector('#product-grid');
+
+function buildProductCard(product) {
+  const card = document.createElement('article');
+  card.className = 'product-card';
+  const imageWrap = document.createElement('div');
+  imageWrap.className = 'product-image';
+  if (product.image) {
+    const image = document.createElement('img');
+    image.src = product.image;
+    image.alt = product.name;
+    image.loading = 'lazy';
+    imageWrap.append(image);
+  } else {
+    imageWrap.classList.add('product-placeholder');
+    imageWrap.setAttribute('aria-hidden', 'true');
+    const heart = document.createElement('span');
+    heart.textContent = '♡';
+    const label = document.createElement('small');
+    label.textContent = 'YOUR COMPANION, DRAWN BY HAND';
+    imageWrap.append(heart, label);
+  }
+  const details = document.createElement('div');
+  details.className = 'product-details';
+  const text = document.createElement('div');
+  const type = document.createElement('p');
+  type.className = 'product-type';
+  type.textContent = product.category || 'PORTRAIT';
+  const title = document.createElement('h3');
+  title.textContent = product.name;
+  const price = document.createElement('p');
+  price.className = 'product-price';
+  price.textContent = product.price == null ? 'Made to order · Custom quote' : `₹${Number(product.price).toLocaleString('en-IN')}`;
+  const description = document.createElement('p');
+  description.className = 'product-description';
+  description.textContent = product.description || '';
+  text.append(type, title, price, description);
+  const button = document.createElement('button');
+  button.className = 'add-to-order';
+  button.type = 'button';
+  button.dataset.product = product.name;
+  button.dataset.stock = product.stock == null ? '' : String(product.stock);
+  button.textContent = product.stock === 0 ? 'Out of stock' : 'Order this portrait';
+  const arrow = document.createElement('span');
+  arrow.textContent = '→';
+  button.append(arrow);
+  button.disabled = product.stock === 0;
+  details.append(text, button);
+  card.append(imageWrap, details);
+  return card;
+}
+
+async function loadManagedProducts() {
+  try {
+    const response = await fetch('/api/products', { cache: 'no-store' });
+    if (!response.ok) return;
+    const items = await response.json();
+    if (Array.isArray(items) && items.length) productGrid.replaceChildren(...items.map(buildProductCard));
+  } catch {
+    // Keep the bundled starter catalogue when the site is opened without the Node server.
+  }
+}
 
 function renderOrderBag() {
   const items = [...orderBag.entries()];
@@ -194,11 +256,17 @@ function renderOrderBag() {
   });
 }
 
-document.querySelectorAll('.add-to-order').forEach((button) => {
-  button.addEventListener('click', () => {
+productGrid.addEventListener('click', (event) => {
+  const button = event.target.closest('.add-to-order');
+  if (button && !button.disabled) {
     const product = button.dataset.product;
-    const image = button.closest('.product-card').querySelector('.product-image img').getAttribute('src');
+    const image = button.closest('.product-card').querySelector('.product-image img')?.getAttribute('src') || '';
     const item = orderBag.get(product) || { quantity: 0, image };
+    const stock = button.dataset.stock === '' ? null : Number(button.dataset.stock);
+    if (stock !== null && item.quantity >= stock) {
+      orderStatus.textContent = 'The available stock for this portrait is already in your order.';
+      return;
+    }
     item.quantity += 1;
     orderBag.set(product, item);
     renderOrderBag();
@@ -209,7 +277,7 @@ document.querySelectorAll('.add-to-order').forEach((button) => {
       button.classList.remove('added');
       button.innerHTML = original;
     }, 1300);
-  });
+  }
 });
 
 orderBagButton.addEventListener('click', () => orderDialog.showModal());
@@ -253,3 +321,5 @@ orderForm.addEventListener('submit', (event) => {
 });
 
 renderOrderBag();
+loadManagedProducts();
+
